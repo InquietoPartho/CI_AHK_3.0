@@ -1,3 +1,30 @@
+# pyproject.toml
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=42", "wheel"]
 build-backend = "setuptools.build_meta"
+
+[project]
+name = "ci_ahk"
+version = "0.1.0"
+description = "Class-Imbalance–Aware Adaptive Hybrid Kernel for SVM"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [
+    { name="Pijush Kanti Roy Partho", email="pijushkantiroy2040@gmail.com" }
+]
+keywords = ["machine-learning", "svm", "kernel", "hybrid-kernel", "class-imbalance"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent"
+]
+dependencies = [
+    "numpy>=1.20",
+    "scikit-learn>=1.1",
+    "scipy>=1.7",
+    "statsmodels>=0.13"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+exclude = ["tests*"]
