@@ -1,29 +1,26 @@
-from setuptools import setup, find_packages
+# setup.py
+import setuptools
 
-setup(
-    name="adaptive-hybrid-kernel",
-    version="0.3.0",
-    description="Adaptive Hybrid Kernel (AHK) for Support Vector Machines",
-    long_description=open("README.md", encoding="utf-8").read(),
-    long_description_content_type="text/markdown",
+setuptools.setup(
+    name="ci_ahk",
+    version="0.1.0",
     author="Pijush Kanti Roy Partho",
     author_email="pijushkantiroy2040@gmail.com",
-    url="https://github.com/InquietoPartho/CI_AHK_3.0",  # optional
-    license="MIT",  # or Apache-2.0, GPL-3.0 depending on your choice
-    packages=find_packages(),
+    description="Class-Imbalance–Aware Adaptive Hybrid Kernel for SVM",
+    long_description=open("README.md", encoding="utf-8").read(),
+    long_description_content_type="text/markdown",
+    url="https://github.com/InquietoPartho/CI_AHK_3.0",
+    packages=setuptools.find_packages(),
+    python_requires=">=3.7",
     install_requires=[
         "numpy>=1.20",
-        "scikit-learn>=1.0",
+        "scikit-learn>=1.1",
+        "scipy>=1.7",
+        "statsmodels>=0.13"
     ],
     classifiers=[
-        "Development Status :: 3 - Alpha",
-        "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: 3.9",
-        "Programming Language :: Python :: 3.10",
-        "Topic :: Scientific/Engineering :: Artificial Intelligence",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
     ],
-    python_requires=">=3.8",
 )
